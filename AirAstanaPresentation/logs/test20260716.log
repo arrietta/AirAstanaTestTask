@@ -1,0 +1,156 @@
+2026-07-16 03:15:57.240 +05:00 [INF] Entity Framework Core 6.0.36 initialized 'AirAstanaDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.36' with options: None
+2026-07-16 03:15:57.394 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2026-07-16 03:15:57.592 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Users" AS "u")
+2026-07-16 03:15:57.667 +05:00 [INF] User profile is available. Using 'C:\Users\Arfeil\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-16 03:15:57.764 +05:00 [INF] Now listening on: https://localhost:7091
+2026-07-16 03:15:57.765 +05:00 [INF] Now listening on: http://localhost:5012
+2026-07-16 03:15:57.769 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-16 03:15:57.770 +05:00 [INF] Hosting environment: Development
+2026-07-16 03:15:57.771 +05:00 [INF] Content root path: C:\Users\Arfeil\Desktop\MicroProjects\TestTaskMplat\FlyArystanTestTask\AirAstanaPresentation\
+2026-07-16 03:15:58.491 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger - -
+2026-07-16 03:15:58.557 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger - - - 301 0 - 69.2682ms
+2026-07-16 03:15:58.762 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.html - -
+2026-07-16 03:15:58.821 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.html - - - 200 - text/html;charset=utf-8 59.5320ms
+2026-07-16 03:15:58.840 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - -
+2026-07-16 03:15:58.841 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - -
+2026-07-16 03:15:58.841 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - -
+2026-07-16 03:15:58.880 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-07-16 03:15:58.880 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-07-16 03:15:58.890 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 48.8575ms
+2026-07-16 03:15:58.891 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - - - 200 144929 text/css 49.7019ms
+2026-07-16 03:15:58.892 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-07-16 03:15:58.901 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 58.7364ms
+2026-07-16 03:15:59.085 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - -
+2026-07-16 03:15:59.248 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 163.3793ms
+2026-07-16 03:16:03.879 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7091/api/Auth/login application/json 50
+2026-07-16 03:16:03.948 +05:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (AirAstanaPresentation)'
+2026-07-16 03:16:03.975 +05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Presentation.Controllers.LoginRequest) on controller Presentation.Controllers.AuthController (AirAstanaPresentation).
+2026-07-16 03:16:04.057 +05:00 [INF] Executing action method Presentation.Controllers.AuthController.Login (AirAstanaPresentation) - Validation state: "Valid"
+2026-07-16 03:16:04.063 +05:00 [INF] Entity Framework Core 6.0.36 initialized 'AirAstanaDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.36' with options: None
+2026-07-16 03:16:04.227 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_Username_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."Password", "u"."RoleId", "u"."Username", "r"."Id", "r"."Code"
+FROM "Users" AS "u"
+INNER JOIN "Roles" AS "r" ON "u"."RoleId" = "r"."Id"
+WHERE "u"."Username" = @__request_Username_0
+LIMIT 1
+2026-07-16 03:16:04.415 +05:00 [INF] Executed action method Presentation.Controllers.AuthController.Login (AirAstanaPresentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 351.3973ms.
+2026-07-16 03:16:04.421 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-16 03:16:04.429 +05:00 [INF] Executed action Presentation.Controllers.AuthController.Login (AirAstanaPresentation) in 446.4762ms
+2026-07-16 03:16:04.432 +05:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (AirAstanaPresentation)'
+2026-07-16 03:16:04.436 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7091/api/Auth/login application/json 50 - 200 - application/json;+charset=utf-8 556.9486ms
+2026-07-16 03:16:26.002 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/api/Flights - -
+2026-07-16 03:16:26.084 +05:00 [INF] Executing endpoint 'Presentation.Controllers.FlightsController.Get (AirAstanaPresentation)'
+2026-07-16 03:16:26.090 +05:00 [INF] Route matched with {action = "Get", controller = "Flights"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String, System.String) on controller Presentation.Controllers.FlightsController (AirAstanaPresentation).
+2026-07-16 03:16:26.094 +05:00 [INF] Executing action method Presentation.Controllers.FlightsController.Get (AirAstanaPresentation) - Validation state: "Valid"
+2026-07-16 03:16:26.163 +05:00 [INF] Entity Framework Core 6.0.36 initialized 'AirAstanaDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.36' with options: None
+2026-07-16 03:16:26.175 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Arrival", "f"."Departure", "f"."Destination", "f"."Origin", "f"."Status"
+FROM "Flights" AS "f"
+2026-07-16 03:16:26.192 +05:00 [INF] Executed action method Presentation.Controllers.FlightsController.Get (AirAstanaPresentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 95.9607ms.
+2026-07-16 03:16:26.194 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.Flight, AirAstana.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-16 03:16:26.198 +05:00 [INF] Executed action Presentation.Controllers.FlightsController.Get (AirAstanaPresentation) in 105.0533ms
+2026-07-16 03:16:26.199 +05:00 [INF] Executed endpoint 'Presentation.Controllers.FlightsController.Get (AirAstanaPresentation)'
+2026-07-16 03:16:26.200 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/api/Flights - - - 200 - application/json;+charset=utf-8 198.0573ms
+2026-07-16 03:16:30.480 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/api/Flights?origin=almaty - -
+2026-07-16 03:16:30.484 +05:00 [INF] Executing endpoint 'Presentation.Controllers.FlightsController.Get (AirAstanaPresentation)'
+2026-07-16 03:16:30.487 +05:00 [INF] Route matched with {action = "Get", controller = "Flights"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String, System.String) on controller Presentation.Controllers.FlightsController (AirAstanaPresentation).
+2026-07-16 03:16:30.498 +05:00 [INF] Executing action method Presentation.Controllers.FlightsController.Get (AirAstanaPresentation) - Validation state: "Valid"
+2026-07-16 03:16:30.506 +05:00 [INF] Executed action method Presentation.Controllers.FlightsController.Get (AirAstanaPresentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.4578ms.
+2026-07-16 03:16:30.509 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.Flight, AirAstana.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-16 03:16:30.511 +05:00 [INF] Executed action Presentation.Controllers.FlightsController.Get (AirAstanaPresentation) in 20.7234ms
+2026-07-16 03:16:30.512 +05:00 [INF] Executed endpoint 'Presentation.Controllers.FlightsController.Get (AirAstanaPresentation)'
+2026-07-16 03:16:30.514 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/api/Flights?origin=almaty - - - 200 - application/json;+charset=utf-8 33.4373ms
+2026-07-16 03:16:36.338 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7091/api/Flights application/json 150
+2026-07-16 03:16:36.343 +05:00 [INF] Executing endpoint 'Presentation.Controllers.FlightsController.Create (AirAstanaPresentation)'
+2026-07-16 03:16:36.350 +05:00 [INF] Route matched with {action = "Create", controller = "Flights"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Presentation.Requests.CreateFlightRequest) on controller Presentation.Controllers.FlightsController (AirAstanaPresentation).
+2026-07-16 03:16:36.402 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-07-16 03:16:36.406 +05:00 [INF] Executed action Presentation.Controllers.FlightsController.Create (AirAstanaPresentation) in 52.2186ms
+2026-07-16 03:16:36.408 +05:00 [INF] Executed endpoint 'Presentation.Controllers.FlightsController.Create (AirAstanaPresentation)'
+2026-07-16 03:16:36.409 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7091/api/Flights application/json 150 - 400 - application/problem+json;+charset=utf-8 71.0654ms
+2026-07-16 03:16:46.348 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7091/api/Flights application/json 150
+2026-07-16 03:16:46.350 +05:00 [INF] Executing endpoint 'Presentation.Controllers.FlightsController.Create (AirAstanaPresentation)'
+2026-07-16 03:16:46.352 +05:00 [INF] Route matched with {action = "Create", controller = "Flights"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Presentation.Requests.CreateFlightRequest) on controller Presentation.Controllers.FlightsController (AirAstanaPresentation).
+2026-07-16 03:16:46.356 +05:00 [INF] Executing action method Presentation.Controllers.FlightsController.Create (AirAstanaPresentation) - Validation state: "Valid"
+2026-07-16 03:16:46.362 +05:00 [INF] Entity Framework Core 6.0.36 initialized 'AirAstanaDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.36' with options: None
+2026-07-16 03:16:46.511 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTimeOffset), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 6), @p3='?' (Size = 6), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Flights" ("Arrival", "Departure", "Destination", "Origin", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT "Id"
+FROM "Flights"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2026-07-16 03:16:46.562 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Arrival", "f"."Departure", "f"."Destination", "f"."Origin", "f"."Status"
+FROM "Flights" AS "f"
+2026-07-16 03:16:46.567 +05:00 [INF] string at "2026-07-15T22:16:46.5668985+00:00": created flight 5 (almaty to string, "InTime")
+2026-07-16 03:16:46.572 +05:00 [INF] Executed action method Presentation.Controllers.FlightsController.Create (AirAstanaPresentation), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 214.342ms.
+2026-07-16 03:16:46.574 +05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Domain.Models.Flight'.
+2026-07-16 03:16:46.598 +05:00 [INF] Executed action Presentation.Controllers.FlightsController.Create (AirAstanaPresentation) in 243.6522ms
+2026-07-16 03:16:46.601 +05:00 [INF] Executed endpoint 'Presentation.Controllers.FlightsController.Create (AirAstanaPresentation)'
+2026-07-16 03:16:46.602 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7091/api/Flights application/json 150 - 201 - application/json;+charset=utf-8 253.8175ms
+2026-07-16 03:16:58.292 +05:00 [INF] Request starting HTTP/2 PUT https://localhost:7091/api/Flights/5/status application/json 17
+2026-07-16 03:16:58.294 +05:00 [INF] Executing endpoint 'Presentation.Controllers.FlightsController.UpdateStatus (AirAstanaPresentation)'
+2026-07-16 03:16:58.299 +05:00 [INF] Route matched with {action = "UpdateStatus", controller = "Flights"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateStatus(Int32, Presentation.Requests.UpdateFlightStatusRequest) on controller Presentation.Controllers.FlightsController (AirAstanaPresentation).
+2026-07-16 03:16:58.305 +05:00 [INF] Executing action method Presentation.Controllers.FlightsController.UpdateStatus (AirAstanaPresentation) - Validation state: "Valid"
+2026-07-16 03:16:58.332 +05:00 [INF] Entity Framework Core 6.0.36 initialized 'AirAstanaDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.36' with options: None
+2026-07-16 03:16:58.361 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Arrival", "f"."Departure", "f"."Destination", "f"."Origin", "f"."Status"
+FROM "Flights" AS "f"
+WHERE "f"."Id" = @__p_0
+LIMIT 1
+2026-07-16 03:16:58.373 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Flights" SET "Status" = @p0
+WHERE "Id" = @p1;
+SELECT changes();
+2026-07-16 03:16:58.383 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Arrival", "f"."Departure", "f"."Destination", "f"."Origin", "f"."Status"
+FROM "Flights" AS "f"
+2026-07-16 03:16:58.389 +05:00 [INF] string at "2026-07-15T22:16:58.3886525+00:00": updated flight 5 status "InTime" to "Delayed"
+2026-07-16 03:16:58.394 +05:00 [INF] Executed action method Presentation.Controllers.FlightsController.UpdateStatus (AirAstanaPresentation), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 86.396ms.
+2026-07-16 03:16:58.401 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-07-16 03:16:58.402 +05:00 [INF] Executed action Presentation.Controllers.FlightsController.UpdateStatus (AirAstanaPresentation) in 101.022ms
+2026-07-16 03:16:58.404 +05:00 [INF] Executed endpoint 'Presentation.Controllers.FlightsController.UpdateStatus (AirAstanaPresentation)'
+2026-07-16 03:16:58.406 +05:00 [INF] Request finished HTTP/2 PUT https://localhost:7091/api/Flights/5/status application/json 17 - 204 - - 113.7823ms
+2026-07-16 03:17:06.692 +05:00 [INF] Request starting HTTP/2 PUT https://localhost:7091/api/Auth/role/user - 0
+2026-07-16 03:17:06.695 +05:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.GetUserRole (AirAstanaPresentation)'
+2026-07-16 03:17:06.699 +05:00 [INF] Route matched with {action = "GetUserRole", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserRole() on controller Presentation.Controllers.AuthController (AirAstanaPresentation).
+2026-07-16 03:17:06.703 +05:00 [INF] Executing action method Presentation.Controllers.AuthController.GetUserRole (AirAstanaPresentation) - Validation state: "Valid"
+2026-07-16 03:17:06.708 +05:00 [INF] Entity Framework Core 6.0.36 initialized 'AirAstanaDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.36' with options: None
+2026-07-16 03:17:06.718 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__username_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."Password", "u"."RoleId", "u"."Username", "r"."Id", "r"."Code"
+FROM "Users" AS "u"
+INNER JOIN "Roles" AS "r" ON "u"."RoleId" = "r"."Id"
+WHERE "u"."Username" = @__username_0
+LIMIT 1
+2026-07-16 03:17:06.727 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__roleCode_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."Id", "r"."Code"
+FROM "Roles" AS "r"
+WHERE "r"."Code" = @__roleCode_0
+LIMIT 1
+2026-07-16 03:17:06.746 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RoleId" = @p0
+WHERE "Id" = @p1;
+SELECT changes();
+2026-07-16 03:17:06.756 +05:00 [INF] string at "2026-07-15T22:17:06.7566149+00:00": role to User
+2026-07-16 03:17:06.759 +05:00 [INF] Executed action method Presentation.Controllers.AuthController.GetUserRole (AirAstanaPresentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 54.4094ms.
+2026-07-16 03:17:06.762 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-16 03:17:06.763 +05:00 [INF] Executed action Presentation.Controllers.AuthController.GetUserRole (AirAstanaPresentation) in 61.9481ms
+2026-07-16 03:17:06.765 +05:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.GetUserRole (AirAstanaPresentation)'
+2026-07-16 03:17:06.767 +05:00 [INF] Request finished HTTP/2 PUT https://localhost:7091/api/Auth/role/user - 0 - 200 - application/json;+charset=utf-8 74.4963ms
+2026-07-16 03:17:23.770 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7091/api/Flights?origin=almaty - -
+2026-07-16 03:17:23.772 +05:00 [INF] Executing endpoint 'Presentation.Controllers.FlightsController.Get (AirAstanaPresentation)'
+2026-07-16 03:17:23.773 +05:00 [INF] Route matched with {action = "Get", controller = "Flights"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(System.String, System.String) on controller Presentation.Controllers.FlightsController (AirAstanaPresentation).
+2026-07-16 03:17:23.780 +05:00 [INF] Executing action method Presentation.Controllers.FlightsController.Get (AirAstanaPresentation) - Validation state: "Valid"
+2026-07-16 03:17:23.785 +05:00 [INF] Executed action method Presentation.Controllers.FlightsController.Get (AirAstanaPresentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.625ms.
+2026-07-16 03:17:23.789 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Models.Flight, AirAstana.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-16 03:17:23.791 +05:00 [INF] Executed action Presentation.Controllers.FlightsController.Get (AirAstanaPresentation) in 10.9043ms
+2026-07-16 03:17:23.793 +05:00 [INF] Executed endpoint 'Presentation.Controllers.FlightsController.Get (AirAstanaPresentation)'
+2026-07-16 03:17:23.796 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7091/api/Flights?origin=almaty - - - 200 - application/json;+charset=utf-8 25.3402ms
+2026-07-16 03:17:27.045 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7091/api/Flights application/json 150
+2026-07-16 03:17:27.047 +05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator)
+2026-07-16 03:17:27.050 +05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-07-16 03:17:27.051 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7091/api/Flights application/json 150 - 403 0 - 6.5816ms
